@@ -14,4 +14,6 @@ ENV VITE_API_URL 'http://localhost:8080/api'
 COPY --from=build /app/dist /usr/share/nginx/html
 COPY ./nginx/default.conf /etc/nginx/conf.d/stay-bae.conf
 
+EXPOSE 80/tcp
+
 CMD [ "nginx", "-g", "daemon off;" ]
